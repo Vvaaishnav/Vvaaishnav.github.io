@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnav R | AI & ML Engineer Portfolio</title>
+    <style>
+        /* Modern CSS Reset & Variable Definitions */
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --border-color: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 80px 0 50px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 15px auto;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            margin: 0 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background-color: #7dd3fc;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-card);
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 50px 0 20px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 12px;
+            margin-bottom: 30px;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-card);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 12px 0 18px 0;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .tag-alt {
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Skills Layout */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h4 {
+            margin: 0 0 12px 0;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .skill-list li {
+            margin-bottom: 6px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0 20px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Vaishnav R</h1>
+            <p class="subtitle">B.Tech Final Year Student | AI/ML & Robotics Specialist</p>
+            <p class="tagline">Engineering intelligent automated frameworks, real-time computer vision nodes, and optimized core systems software within Linux testing grounds.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/Vvaaishnav" class="btn btn-primary" target="_blank">View GitHub</a>
+                <a href="https://www.linkedin.com/in/vaishnav-ai-ml" class="btn btn-secondary" target="_blank">LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>Core Technical Implementations</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Autonomous War-Field Spying Robot with Night Vision</h3>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Robot Operating System (ROS)</span>
+                    <span class="tag">Linux Ecosystem</span>
+                    <span class="tag">C++ Node Dev</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+                <p class="project-description">
+                    Architected an agile surveillance rover integrated with specialized imaging instrumentation for low-light scouting operations. Created distinct ROS computational nodes deployed directly within Linux runtimes to manage clean inter-process message handling, video stream sequencing, and motor tracking telemetry without platform lag.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Deterministic Multi-Process Linux Controller</h3>
+                </div>
+                <div class="project-tags">
+                    <span class="tag tag-alt">Systems Programming</span>
+                    <span class="tag tag-alt">C Language</span>
+                    <span class="tag tag-alt">Linux Kernel API</span>
+                    <span class="tag tag-alt">OS Architecture</span>
+                </div>
+                <p class="project-description">
+                    Designed a low-level systems execution profile utilizing primitive OS calls including <code>fork()</code> and <code>wait()</code> routines. Optimized execution pipelines to guarantee deterministic, isolated runtime behaviors across cascading child processing tracks, eliminating zombie state allocations and context tracking issues.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Toolbelt</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Artificial Intelligence</h4>
+                    <ul class="skill-list">
+                        <li>Python Engineering</li>
+                        <li>Predictive Modelling</li>
+                        <li>Computer Vision Architectures</li>
+                        <li>Data Evaluation Layers</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Systems & Hardware</h4>
+                    <ul class="skill-list">
+                        <li>Robot Operating System (ROS)</li>
+                        <li>C & C++ Programming</li>
+                        <li>Linux Env Optimization</li>
+                        <li>Bash Utility Scripting</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Foundations</h4>
+                    <ul class="skill-list">
+                        <li>Data Structures & Algos</li>
+                        <li>Kernel Process Logic</li>
+                        <li>Git Version Workflows</li>
+                        <li>UI Prototyping (Canva)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vaishnav R. Built natively for GitHub Pages deployment.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
