@@ -19,7 +19,13 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            /* Integrated Animated Cyberpunk Grid Design */
             background-color: var(--bg-main);
+            background-image: 
+                linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: center;
             color: var(--text-primary);
             line-height: 1.7;
         }
@@ -33,8 +39,28 @@
         /* Hero Section */
         header {
             text-align: center;
-            padding: 80px 0 50px 0;
+            padding: 60px 0 50px 0;
             border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Profile Image Styling Added Here */
+        .profile-img-container {
+            margin-bottom: 24px;
+        }
+
+        .profile-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-avatar:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
         }
 
         h1 {
@@ -156,8 +182,31 @@
 
         .project-description {
             color: var(--text-secondary);
-            margin: 0;
+            margin: 0 0 20px 0;
             font-size: 1rem;
+        }
+
+        /* 3D Projection Image Layout */
+        .projection-container {
+            margin-top: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: #0b1329;
+            text-align: center;
+        }
+
+        .projection-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            display: block;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .project-card:hover .projection-img {
+            opacity: 1;
         }
 
         /* Skills Layout */
@@ -207,6 +256,10 @@
 
     <div class="container">
         <header>
+            <div class="profile-img-container">
+                <img src="profile.jpg" alt="Vaishnav R" class="profile-avatar" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:138px; height:138px; border-radius:50%; background:var(--bg-card); border:2px dashed var(--accent-blue); margin:0 auto; display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--text-secondary);\'>[ profile.jpg ]</div>'">
+            </div>
+
             <h1>Vaishnav R</h1>
             <p class="subtitle">B.Tech Final Year Student | AI/ML & Robotics Specialist</p>
             <p class="tagline">Engineering intelligent automated frameworks, real-time computer vision nodes, and optimized core systems software within Linux testing grounds.</p>
@@ -221,6 +274,24 @@
             
             <div class="project-card">
                 <div class="project-header">
+                    <h3 class="project-title">Automated Hydraulic System Sail Boat</h3>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Fluid Dynamics</span>
+                    <span class="tag">Mechatronics Architecture</span>
+                    <span class="tag">Hardware Prototyping</span>
+                    <span class="tag tag-alt">Control Loops</span>
+                </div>
+                <div class="project-description">
+                    Developed a specialized mechatronic hull control rig leveraging miniature fluid valve distributions for closed-loop maritime navigation adjustments. Optimized manual dynamic responses across localized rig layouts to sustain balance shifts over changing surface resistance baselines.
+                </div>
+                <div class="projection-container">
+                    <img src="me1.jpeg" alt="3D Hydraulic System Blueprint" class="projection-img" onerror="this.style.display='none';">
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
                     <h3 class="project-title">Autonomous War-Field Spying Robot with Night Vision</h3>
                 </div>
                 <div class="project-tags">
@@ -229,9 +300,12 @@
                     <span class="tag">C++ Node Dev</span>
                     <span class="tag">Computer Vision</span>
                 </div>
-                <p class="project-description">
+                <div class="project-description">
                     Architected an agile surveillance rover integrated with specialized imaging instrumentation for low-light scouting operations. Created distinct ROS computational nodes deployed directly within Linux runtimes to manage clean inter-process message handling, video stream sequencing, and motor tracking telemetry without platform lag.
-                </p>
+                </div>
+                <div class="projection-container">
+                    <img src="me2.jpeg" alt="3D Robotic Assembly Layout" class="projection-img" onerror="this.style.display='none';">
+                </div>
             </div>
 
             <div class="project-card">
@@ -244,9 +318,9 @@
                     <span class="tag tag-alt">Linux Kernel API</span>
                     <span class="tag tag-alt">OS Architecture</span>
                 </div>
-                <p class="project-description">
+                <div class="project-description">
                     Designed a low-level systems execution profile utilizing primitive OS calls including <code>fork()</code> and <code>wait()</code> routines. Optimized execution pipelines to guarantee deterministic, isolated runtime behaviors across cascading child processing tracks, eliminating zombie state allocations and context tracking issues.
-                </p>
+                </div>
             </div>
         </section>
 
@@ -267,8 +341,9 @@
                     <ul class="skill-list">
                         <li>Robot Operating System (ROS)</li>
                         <li>C & C++ Programming</li>
+                        <li>Hydraulic Control Valves</li>
+                        <li>Fluid Loop Architecture</li>
                         <li>Linux Env Optimization</li>
-                        <li>Bash Utility Scripting</li>
                     </ul>
                 </div>
                 <div class="skill-category">
